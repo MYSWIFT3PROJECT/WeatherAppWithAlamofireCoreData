@@ -161,6 +161,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="P1c-YI-ec7">
+                                <rect key="frame" x="177" y="296" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -170,13 +174,14 @@
                         <outlet property="cityDescription" destination="b43-OM-WHt" id="OAq-ta-YcR"/>
                         <outlet property="cityImage" destination="1s6-l1-MkM" id="Nmy-cu-jae"/>
                         <outlet property="cityName" destination="dvF-E5-2ZU" id="Tbc-Uu-6NM"/>
+                        <outlet property="footerView" destination="P1c-YI-ec7" id="LG4-5t-2F6"/>
                         <outlet property="maxTemp" destination="who-cI-sy0" id="S6b-7E-687"/>
                         <outlet property="tableView" destination="hdU-5e-wkt" id="30Q-lI-hRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="-181"/>
+            <point key="canvasLocation" x="-719" y="-174"/>
         </scene>
         <!--Left Side View Controller-->
         <scene sceneID="Zib-ay-SG5">
@@ -198,7 +203,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTQ-ut-oTQ" id="POt-d9-xvR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe9-6s-Mvr">
@@ -219,8 +224,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ntt-vg-PeG">
                                 <rect key="frame" x="118" y="631" width="167" height="29"/>
                                 <segments>
-                                    <segment title="C"/>
-                                    <segment title="F"/>
+                                    <segment title="°C"/>
+                                    <segment title="°F"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -248,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRh-FY-3UJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256.8" y="-181.25937031484258"/>
+            <point key="canvasLocation" x="740" y="-174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wn2-nH-csH">
@@ -266,7 +271,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSe-Zo-VTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1042" y="-181"/>
+            <point key="canvasLocation" x="-1559" y="-174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wyG-Sy-xbx">
@@ -285,7 +290,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIm-hS-cJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="533.60000000000002" y="-181.25937031484258"/>
+            <point key="canvasLocation" x="17" y="-174"/>
         </scene>
     </scenes>
     <resources>

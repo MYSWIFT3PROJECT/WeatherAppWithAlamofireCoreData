@@ -17,6 +17,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var cityImage: UIImageView!
     @IBOutlet weak var maxTemp: UILabel!
     @IBOutlet weak var WeatherDay: UILabel!
+    @IBOutlet weak var footerView: UIActivityIndicatorView!
+    
     //TableView
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,8 +39,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     @IBAction func refreshButton(_ sender: Any) {
-        
-        
+        //downloadForecastData(completed: self)
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//        locationManager.requestWhenInUseAuthorization()
+//        locationManager.startMonitoringSignificantLocationChanges()
+//        currentWeather = CurrentWeather()
+    
     }
     @IBAction func leftSideButton(_ sender: Any) {
         
@@ -54,13 +60,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
         
+        footerView.isHidden = true
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
         currentWeather = CurrentWeather()
         
+    
         // Do any additional setup after loading the view.
+    }
+    func refreshHandeller(){
+        forecasts.removeAll()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -100,7 +113,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                     self.tableView.reloadData()
                 }
             }
-            print(response.result.value)
+            //print(response.result.value)
             completed()
         }
     }
